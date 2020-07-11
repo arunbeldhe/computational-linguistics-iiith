@@ -34,7 +34,7 @@ function funct()
 	document.getElementById("four").innerHTML=""
 	document.getElementById("fourr").innerHTML=""
 	document.getElementById("six").style.visibility="hidden";
-	count=0
+	count=0;
 
 if(document.getElementById("english").selected)
 {
@@ -65,12 +65,13 @@ button.addEventListener ("click", function() {
 	document.getElementById("fourr").innerHTML="(after selecting words):";
     document.getElementById("five").innerHTML+=this.innerHTML+" ";
     this.style.visibility="hidden";
-    count=count+1;
+    count++;
     if (count>0 ) 
      {
      	document.getElementById("six").style.visibility="visible";
      }
-    if (count==a1.length) 
+     
+    if (count==a1.length||count==2*a1.length||count==3*a1.length||count==4*a1.length||count==5*a1.length) 
      {
      	document.getElementById("seven").style.visibility="visible";
      }
@@ -103,16 +104,17 @@ for(i=0;i<b1.length;i++)
 			document.getElementById("fourr").innerHTML="(after selecting words):";
 		    document.getElementById("five").innerHTML+=this.innerHTML+" ";
 		    this.style.visibility="hidden";
-		    count=count+1;
+		    count++;
+		    coun=count;
 		    if (count>0) 
 		     {
 		     	document.getElementById("six").style.visibility="visible";
 		     }
-		    if (count==b1.length) 
+		    if (count==b1.length||count==2*b1.lengthcount==3*b1.lengthcount==4*b1.lengthcount==5*b1.length) 
 		     {
 		     	document.getElementById("seven").style.visibility="visible";
 		     }
-	});
+	});		
 }
 }
 else
@@ -135,6 +137,11 @@ function revert()
 	  	document.getElementById("fourr").innerHTML="";
 		document.getElementById('five').innerHTML="";
 		document.getElementById('six').style.visibility="hidden";
-	
+		document.getElementById('seven').style.visibility="hidden";
+
+
+
 }
 }
+
+
